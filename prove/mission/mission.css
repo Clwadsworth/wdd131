@@ -1,0 +1,78 @@
+body {
+    font-family: 'Times New Roman', Times, serif;
+    background-color: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+main {
+    background-color: white;
+    max-width: 650px;
+    padding: 60px;
+    border: 1px solid #ccc;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+
+}
+
+header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+h1 {
+    font-size: 2.2rem;
+    letter-spacing: 0.2rem;
+    text-transform: uppercase;
+    font-weight: normal;
+    margin-bottom: 10px;
+
+}
+
+h2 {
+    font-family: 'Arial', sans-serif;
+    font-size: 0.9rem;
+    letter-spacing: 0.25rem;
+    color: #006eb6;
+    text-transform: uppercase;
+    margin-top: 0;
+}
+
+hr {
+    border: 0;
+    border-top: 1px solid #e0e0e0;
+    margin: 20px 0;
+}
+
+.mission-content p {
+    font-size: 1.1rem;
+    line-height: 1.5;
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.mission-content p:nth-of-type(2) {
+    font-style: italic;
+}
+
+.objectives {
+    list-style-type: decimal;
+    padding-left: 40px;
+}
+
+.objectives li {
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+    line-height: 1.4;
+}
+
+footer {
+    text-align: center;
+    margin-top: 40px;
+}
+.logo {
+    max-width: 120px;
+    height: auto;
+}
