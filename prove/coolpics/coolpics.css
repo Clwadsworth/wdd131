@@ -110,6 +110,10 @@ footer {
     .gallery {
         grid-template-columns: repeat(2, 300px);
     }
+
+    nav ul {
+        list-style: none;
+    }
 }
 
 @media (min-width: 900px) {
