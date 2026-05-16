@@ -76,9 +76,10 @@ nav.open a {
 
 .gallery {
     display: grid;
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(1, 300px);
     gap: 10px;
     padding: 1rem;
+    justify-content: center;
 }
 
 .gallery img {
@@ -99,7 +100,7 @@ footer {
 
 @media (min-width: 550px) {
     .gallery {
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: repeat(2, 300px);
     }
 }
 
@@ -125,6 +126,6 @@ footer {
     }
 
     .gallery {
-        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-columns: repeat(3, 300px);
     }
 }
