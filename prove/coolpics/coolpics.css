@@ -77,7 +77,7 @@ nav.open a {
 .gallery {
     display: grid;
     grid-template-columns: repeat(1, 300px);
-    gap: 10px;
+    gap: 20px;
     padding: 1rem;
     justify-content: center;
 }
