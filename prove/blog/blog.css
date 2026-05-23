@@ -1,0 +1,119 @@
+body {
+    font-family: 'Georgia', serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    background-color: #fff;
+}
+
+.site-header {
+    width: 100%;
+    text-align: center;
+    margin-top: 1rem;
+}
+
+.header-container h1 {
+    font-size: 2.5rem;
+    color: #5c1d24; 
+    margin: 0.5rem 0;
+}
+
+.main-nav {
+    border-top: 2px solid #f2cfc2; 
+    border-bottom: 2px solid #f2cfc2;
+    padding: 0.75rem 0;
+    margin-top: 1rem;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.main-nav a {
+    text-decoration: none;
+    color: #a82c35;
+    font-weight: bold;
+    font-size: 0.95rem;
+}
+
+.blog-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 1.5rem;
+    gap: 1.5rem;
+}
+
+.book-meta {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end; 
+    gap: 0.5rem;
+    font-size: 0.95rem;
+}
+
+.book-content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.book-title {
+    color: #a82c35;
+    font-size: 1.6rem;
+    margin-top: 0;
+}
+
+.book-cover {
+    display: block;
+    max-width: 200px;
+    height: auto;
+    margin: 1.5rem auto;
+}
+
+.book-description {
+    font-size: 1rem;
+    line-height: 1.5;
+    max-width: 500px;
+}
+
+.site-footer {
+    width: 100%;
+    border-top: 2px solid #f2cfc2;
+    margin-top: 4rem;
+    padding: 1.5rem 0;
+    text-align: center;
+    font-size: 0.9rem;
+}
+
+@media (min-width: 768px) {
+
+    .header-container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 1.5rem;
+    }
+    
+    .main-nav {
+        justify-content: flex-end;
+        padding-right: 1.5rem;
+    }
+
+    .blog-container {
+        grid-template-columns: 250px 1fr;
+        gap: 3rem;
+        margin-top: 4rem;
+    }
+
+    .book-meta {
+        align-items: flex-end;
+        padding-right: 2.5rem;
+        border-right: 2px solid #f2cfc2; 
+    }
+
+    .book-content {
+        padding-left: 1rem;
+        align-items: 1rem;
+        text-align: center;
+    }
+}
