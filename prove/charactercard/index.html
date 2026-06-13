@@ -6,20 +6,20 @@
     <title>Character Interactive Card</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="charactercard.css">
-    <script defer src="charactercard.js"></script>
+    <script src="charactercard.js" defer></script>
 </head>
 <body>
     <div class="card">
         <img class="image" src="images/snortleblat.png" alt="snortleblat">
-        <div class="name">Snortleblat</div>
+        <div class="name" id="charName">Snortleblat</div>
         <div class="stats">
-            <p>Class: Swamp Beast Diplomat</p>
-            <p>Level: 5</p>
-            <p>Health: 40</p>
+            <p>Class: <span id="charClass"></span></p>
+            <p>Level: <span id="charLevel"></span></p>
+            <p>Health: <span id="charHealth"></span></p>
         </div>
         <div class="buttons">
-            <button>Attacked</button>
-            <button>Level Up</button>
+            <button id="attackBtn">Attacked</button>
+            <button id="levelUpBtn">Level Up</button>
         </div>
     </div>
 </body>
