@@ -1,0 +1,10 @@
+.logo {
+    display: flex;
+    gap: 0.5em;
+}
+
+.main-nav {
+    list-style-type: none;
+    display: flex;
+    gap: 1em;
+}
