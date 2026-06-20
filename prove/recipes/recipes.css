@@ -1,10 +1,42 @@
+header {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+img {
+    max-width: 100%;
+}
+
 .logo {
     display: flex;
     gap: 0.5em;
+}
+
+.logo img {
+    max-height: 40px;
 }
 
 .main-nav {
     list-style-type: none;
     display: flex;
     gap: 1em;
+}
+
+.recipe-card {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    border: 1px solid black;
+    padding: 1em;
+}
+
+.recipe-image img {
+    max-height: 350px;
+    width: 100%;
+    object-fit: cover;
+}
+
+.search img {
+    max-height: 40px;
 }
