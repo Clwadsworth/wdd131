@@ -286,6 +286,14 @@ let searchButton = document.querySelector('#search-button');
 
 searchButton.addEventListener('click', search);
 
+function compareRecipes(a, b) {
+    if (a.name.toLowerCase() < b.name.toLowerCase()) {
+        return -1;
+    } else if (a.name.toLowerCase() > b.name.toLowerCase()) {
+        return 1;
+    } 
+    return 0;
+}
 
 let request = searchInput.value.toLowerCase();
 let filtered = recipes.filter(function(recipe) {
@@ -294,6 +302,11 @@ let filtered = recipes.filter(function(recipe) {
         recipe.description.toLowerCase().includes(request) ||
         recipe.tags.find(tag => tag.toLowerCase().includes(request))
     );
+});
+
+recipeContainer.innerHTML = "";
+sorted.forEach(function(recipe) {
+    renderRecipe(recipe);
 });
 
 let randomNum = Math.floor(Math.random()* recipes.length);
