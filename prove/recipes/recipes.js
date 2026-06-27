@@ -322,14 +322,31 @@ function starTemplate(rating) {
     for (let i = 1; i <= 5; i++) {
         if (i <= Math.floor(rating)) {
             html += `<span aria-hidden="true" class="icon-star">⭐</span>`;
-        } else if (i === Math.ceil(rating) && rating % 1 !== 0) {
-            html += `<span aria-hidden="true" class="icon-star-half">⭐</span>`;
         } else {
             html += `<span aria-hidden="true" class="icon-star-empty">☆</span>`;
         }
     }
     html += `</span>`;
     return html;
+}
+
+function recipeTemplate(recipe) {
+    return `<section class="recipe-card">
+  <div class="recipe-image">
+    <img src="${recipe.image}" alt="${recipe.name}">
+  </div>
+  <div class="recipe-content">
+    ${tagTemplate(recipe.tags)}
+    <h2>${recipe.name}</h2>
+    ${starTemplate(recipe.rating)}
+    <p>${recipe.description}</p>
+  </div>
+</section>`;
+}
+
+function renderRecipe(recipe) {
+    let html = recipeTemplate(recipe);
+    recipeContainer.innerHTML += html;
 }
 
 let randomNum = Math.floor(Math.random()* recipes.length);

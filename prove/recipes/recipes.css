@@ -19,6 +19,11 @@ header {
     flex-wrap: wrap;
 } 
 
+.icon-star,
+.icon-star-empty {
+    font-size: 1.2em;
+}
+
 img {
     max-width: 100%;
 }
