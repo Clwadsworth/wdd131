@@ -295,19 +295,23 @@ function compareRecipes(a, b) {
     return 0;
 }
 
-let request = searchInput.value.toLowerCase();
-let filtered = recipes.filter(function(recipe) {
-    return (
-        recipe.name.toLowerCase().includes(request) ||
-        recipe.description.toLowerCase().includes(request) ||
-        recipe.tags.find(tag => tag.toLowerCase().includes(request))
-    );
-});
+function search() {
+    let request = searchInput.value.toLowerCase();
+    let filtered = recipes.filter(function(recipe) {
+        return (
+            recipe.name.toLowerCase().includes(request) ||
+            recipe.description.toLowerCase().includes(request) ||
+            recipe.tags.find(tag => tag.toLowerCase().includes(request))
+        );
+    });
 
-recipeContainer.innerHTML = "";
-sorted.forEach(function(recipe) {
-    renderRecipe(recipe);
-});
+    let sorted = filtered.sort(compareRecipes);
+    recipeContainer.innerHTML = "";
+    sorted.forEach(function(recipe) {
+        renderRecipe(recipe);
+    });
+
+}
 
 let randomNum = Math.floor(Math.random()* recipes.length);
 function init() {
