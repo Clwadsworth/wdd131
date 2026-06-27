@@ -40,28 +40,12 @@
             <h1>RecipeBook</h1>
         </div>
         <div class="search">
-            <input type="text" placeholder="Find a recipe">
-            <img src="images/search.svg" alt="search icon">
+            <input type="text" id="search-input" placeholder="Find a recipe">
+            <button id="search-button"><img src="images/search.svg" alt="search icon"></button>
         </div>
     </header>
     <main>
-        <section class="recipe-card">
-            <div class="recipe-image">
-                <img src="images/apple-crisp.png" alt="bowl of apple crisp topped with vanilla ice cream.">
-            </div>
-            <div class="recipe-content">
-                <span class="tag">Dessert</span>
-                <h2>Apple Crisp</h2>
-                <span class="rating" role="img" aria-label="Rating: 4 out of 5 stars">
-                    <span aria-hidden="true" class="icon-star">⭐</span>
-                    <span aria-hidden="true" class="icon-star">⭐</span>
-                    <span aria-hidden="true" class="icon-star">⭐</span>
-                    <span aria-hidden="true" class="icon-star">⭐</span>
-                    <span aria-hidden="true" class="icon-star-empty">☆</span>
-                </span>
-                <p>This apple crisp recipe is a simple yet delicious fall dessert that's great served warm with vanilla ice cream.</p>
-            </div>
-        </section>        
+        <div class="recipe-container" id="recipe-container"></div>      
     </main>
     <footer>
         <a href="https://www.flaticon.com/free-icons/recipe" title="recipe icons">Recipe icons created by Freepik - Flaticon</a>                   

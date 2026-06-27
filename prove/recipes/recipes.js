@@ -280,4 +280,24 @@ const recipes = [
 	}
 ]            
                     
+let recipeContainer = document.querySelector('#recipe-container');
+let searchInput = document.querySelector('#search-input');
+let searchButton = document.querySelector('#search-button');
 
+searchButton.addEventListener('click', search);
+
+
+let request = searchInput.value.toLowerCase();
+let filtered = recipes.filter(function(recipe) {
+    return (
+        recipe.name.toLowerCase().includes(request) ||
+        recipe.description.toLowerCase().includes(request) ||
+        recipe.tags.find(tag => tag.toLowerCase().includes(request))
+    );
+});
+
+let randomNum = Math.floor(Math.random()* recipes.length);
+function init() {
+    renderRecipe(recipes[randomNum]);
+}
+init();
