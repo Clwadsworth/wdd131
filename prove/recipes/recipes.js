@@ -313,6 +313,25 @@ function search() {
 
 }
 
+function tagTemplate(tags) {
+    return tags.map((tag) => `<span class="tag">${tag}</span>`).join(' ');
+}
+
+function starTemplate(rating) {
+    let html = `<span class="rating" role="img" aria-label="Rating: ${rating} out of 5 stars">`;
+    for (let i = 1; i <= 5; i++) {
+        if (i <= Math.floor(rating)) {
+            html += `<span aria-hidden="true" class="icon-star">⭐</span>`;
+        } else if (i === Math.ceil(rating) && rating % 1 !== 0) {
+            html += `<span aria-hidden="true" class="icon-star-half">⭐</span>`;
+        } else {
+            html += `<span aria-hidden="true" class="icon-star-empty">☆</span>`;
+        }
+    }
+    html += `</span>`;
+    return html;
+}
+
 let randomNum = Math.floor(Math.random()* recipes.length);
 function init() {
     renderRecipe(recipes[randomNum]);
