@@ -21,5 +21,67 @@
             </ul>
         </nav>
     </header>
+    <section id="summary">
+        <div class="card">
+            <h2>Total Spending</h2>
+            <p id="total-spent">$277.72</p>
+        </div>
+        <div class="card">
+            <h2>Budget Remaining</h2>
+            <p id="budget-remaining">$57.28</p>
+        </div>
+        <div class="card">
+            <h2>Categories</h2>
+            <p id="categories">4</p>
+        </div>
+    </section>
+    <button class="button" id="add-expense-button">Add Expense</button>
+    <h3>Recent Transactions</h3>
+    <table>
+        <thead>
+        <tr>
+            <th>Date</th>
+            <th>Category</th>
+            <th>Description</th>
+            <th>Amount</th>
+        </tr>
+        </thead>
+        <tbody id="recent-transactions">
+
+        </tbody>
+    </table>
+    <div id="expense-modal">
+        <form id="expense-form">
+            <div>
+                <label for="category-selection">Category</label>
+                <select id="category-selection">
+                    <option>Food</option>
+                    <option>Transportation</option>
+                    <option>Dining</option>
+                    <option>Entertainment</option>
+                </select>
+            </div>
+            <div>
+                <label for="amount">Amount</label>
+                <input id="amount" type="number">
+            </div>
+            <div>
+                <label for="description">Description</label>
+                <input id="description" type="text">
+            </div>
+            <div>
+                <label for="date">Date</label>
+                <input id="date" type="date">
+            </div>
+            <div>
+                <label for="account">Account</label>
+                <input id="account" type="text">
+            </div>
+            <div>
+                <button id="confirm" type="submit">Confirm</button>
+                <button id="cancel-expense-button" type="button">Cancel</button>
+            </div>
+        </form>
+    </div>
 </body>
 </html>
