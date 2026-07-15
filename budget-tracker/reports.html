@@ -11,7 +11,7 @@
     <header>
         <div class="logo">
             <img src="images/check-money.png" alt="Budget Tracker logo">
-            <h1>Reports Page</h1>
+            <h1>Budget Tracker</h1>
         </div>
         <nav class="main-nav">
             <ul>
@@ -20,5 +20,91 @@
             </ul>
         </nav>
     </header>
+    <main>
+        <h2>Spending History</h2>
+        <table>
+            <thead>
+            <tr>
+                <th>Date</th>
+                <th>Category</th>
+                <th>Description</th>
+                <th>Amount</th>
+            </tr>
+            </thead>
+            <tbody id="history-table">
+                <tr>
+				  <td>06/28</td>
+				  <td>Food</td>
+				  <td>Groceries at Smith's</td>
+				  <td>$54.32</td>
+				</tr>
+				<tr>
+				  <td>06/29</td>
+				  <td>Transportation</td>
+				  <td>Gas fill-up</td>
+				  <td>$38.75</td>
+				</tr>
+				<tr>
+				  <td>06/30</td>
+				  <td>Dining</td>
+				  <td>Lunch at Cafe Rio</td>
+				  <td>$12.50</td>
+				</tr>
+				<tr>
+				  <td>07/01</td>
+				  <td>Entertainment</td>
+				  <td>Movie tickets</td>
+				  <td>$24.00</td>
+				</tr>
+				<tr>
+				  <td>07/02</td>
+				  <td>Dining</td>
+				  <td>Coffee run</td>
+				  <td>$6.25</td>
+				</tr>
+				<tr>
+				  <td>07/02</td>
+				  <td>Food</td>
+				  <td>Costco run</td>
+				  <td>$89.10</td>
+				</tr>
+				<tr>
+				  <td>07/03</td>
+				  <td>Dining</td>
+				  <td>Dinner out</td>
+				  <td>$42.80</td>
+				</tr>
+				<tr>
+				  <td>07/03</td>
+				  <td>Transportation</td>
+				  <td>Parking</td>
+				  <td>$10.00</td>
+				</tr>
+			</tbody>
+        </table>
+        <div id="category-totals">
+            <h3>Totals by Category</h3>
+            <div class="under-budget">
+                <span class="category-name">Food</span>
+                <span class="category-amount">$143.42</span>
+                <span class="category-status">Under $150 limit</span>
+            </div>
+            <div class="under-budget">
+                <span class="category-name">Transportation</span>
+                <span class="category-amount">$48.75</span>
+                <span class="category-status">Under $75 limit</span>
+            </div>
+            <div class="under-budget">
+                <span class="category-name">Entertainment</span>
+                <span class="category-amount">$24.00</span>
+                <span class="category-status">Under $60 limit</span>
+            </div>
+            <div class="over-budget">
+                <span class="category-name">Dining</span>
+                <span class="category-amount">$61.55</span>
+                <span class="category-status">Over its $50 limit</span>
+            </div>
+        </div>
+    </main>
 </body>
 </html>
