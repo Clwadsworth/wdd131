@@ -32,6 +32,12 @@ header {
     height: 40px;
 }
 
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 30px;
+}
+
 nav ul {
     list-style: none;
     padding: 0;
@@ -61,6 +67,7 @@ nav ul {
 
 table {
     width: 100%;
+    min-width: 600px;
     border-collapse: collapse;
 }
 
@@ -102,6 +109,11 @@ tr:nth-child(even) {
     max-width: 320px;
 }
 
+.table-wrapper {
+    overflow-x: auto;
+    width: 100%;
+}
+
 label {
     display: block;
     width: 100%;
@@ -120,10 +132,22 @@ input, select {
 }
 
 #category-totals > div {
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
     border-radius: 1rem;
     padding: 10px;
+}
+
+.category-name {
+    text-align: left;
+}
+
+.category-amount {
+    text-align: center;
+}
+
+.category-status {
+    text-align: right;
 }
 
 .under-budget {

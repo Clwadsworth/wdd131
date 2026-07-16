@@ -22,66 +22,77 @@
     </header>
     <main>
         <h2>Spending History</h2>
-        <table>
-            <thead>
-            <tr>
-                <th>Date</th>
-                <th>Category</th>
-                <th>Description</th>
-                <th>Amount</th>
-            </tr>
-            </thead>
-            <tbody id="history-table">
+        <div id="filter-controls">
+            <label for="category-filter">Filter by category</label>
+            <select id="category-filter">
+                <option value="All">All</option>
+                <option value="Food">Food</option>
+                <option value="Transportation">Transportation</option>
+                <option value="Dining">Dining</option>
+                <option value="Entertainment">Entertainment</option>
+            </select>
+        </div>
+        <div class="table-wrapper">
+            <table>
+                <thead>
                 <tr>
-				  <td>06/28</td>
-				  <td>Food</td>
-				  <td>Groceries at Smith's</td>
-				  <td>$54.32</td>
-				</tr>
-				<tr>
-				  <td>06/29</td>
-				  <td>Transportation</td>
-				  <td>Gas fill-up</td>
-				  <td>$38.75</td>
-				</tr>
-				<tr>
-				  <td>06/30</td>
-				  <td>Dining</td>
-				  <td>Lunch at Cafe Rio</td>
-				  <td>$12.50</td>
-				</tr>
-				<tr>
-				  <td>07/01</td>
-				  <td>Entertainment</td>
-				  <td>Movie tickets</td>
-				  <td>$24.00</td>
-				</tr>
-				<tr>
-				  <td>07/02</td>
-				  <td>Dining</td>
-				  <td>Coffee run</td>
-				  <td>$6.25</td>
-				</tr>
-				<tr>
-				  <td>07/02</td>
-				  <td>Food</td>
-				  <td>Costco run</td>
-				  <td>$89.10</td>
-				</tr>
-				<tr>
-				  <td>07/03</td>
-				  <td>Dining</td>
-				  <td>Dinner out</td>
-				  <td>$42.80</td>
-				</tr>
-				<tr>
-				  <td>07/03</td>
-				  <td>Transportation</td>
-				  <td>Parking</td>
-				  <td>$10.00</td>
-				</tr>
-			</tbody>
-        </table>
+                    <th>Date</th>
+                    <th>Category</th>
+                    <th>Description</th>
+                    <th>Amount</th>
+                </tr>
+                </thead>
+                <tbody id="history-table">
+                    <tr>
+    				  <td>06/28</td>
+    				  <td>Food</td>
+    				  <td>Groceries at Smith's</td>
+    				  <td>$54.32</td>
+    				</tr>
+    				<tr>
+    				  <td>06/29</td>
+    				  <td>Transportation</td>
+    				  <td>Gas fill-up</td>
+    				  <td>$38.75</td>
+    				</tr>
+    				<tr>
+    				  <td>06/30</td>
+    				  <td>Dining</td>
+    				  <td>Lunch at Cafe Rio</td>
+    				  <td>$12.50</td>
+    				</tr>
+    				<tr>
+    				  <td>07/01</td>
+    				  <td>Entertainment</td>
+    				  <td>Movie tickets</td>
+    				  <td>$24.00</td>
+    				</tr>
+    				<tr>
+    				  <td>07/02</td>
+    				  <td>Dining</td>
+    				  <td>Coffee run</td>
+    				  <td>$6.25</td>
+    				</tr>
+    				<tr>
+    				  <td>07/02</td>
+    				  <td>Food</td>
+    				  <td>Costco run</td>
+    				  <td>$89.10</td>
+    				</tr>
+    				<tr>
+    				  <td>07/03</td>
+    				  <td>Dining</td>
+    				  <td>Dinner out</td>
+    				  <td>$42.80</td>
+    				</tr>
+    				<tr>
+    				  <td>07/03</td>
+    				  <td>Transportation</td>
+    				  <td>Parking</td>
+    				  <td>$10.00</td>
+    				</tr>
+    			</tbody>
+            </table>
         <div id="category-totals">
             <h3>Totals by Category</h3>
             <div class="under-budget">
@@ -105,6 +116,8 @@
                 <span class="category-status">Over its $50 limit</span>
             </div>
         </div>
+        </div>
     </main>
+    <script type="module" src="reports.js"></script>
 </body>
 </html>
